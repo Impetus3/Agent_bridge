@@ -6,7 +6,7 @@ with open("chunks.json", "r") as f:
 chunk_size = len(data)
 chunk_count = 3
 
-for i in range(0, len(data), chunk_size):
+for i in range(100, len(data), chunk_size):
     chunk_count += 1
     with open(f"chunk_{chunk_count}.json", "w") as f:
         for record in data[i:i+chunk_size]:
